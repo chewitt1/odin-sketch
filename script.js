@@ -2,6 +2,7 @@ let rows = 16;
 let size = 560/rows;
 let main = document.querySelector(".main");
 let draw = false;
+let erase = false;
 window.onload = () => {
     for(var i = 0; i < rows; i++){
         main.appendChild(getRow());
@@ -28,10 +29,19 @@ function getRow(){
 }
 
 function changeColor(e){
-    if(draw){
-        const target = e.target.closest(".box");
-        if(target){
-            target.classList.add("box-touch");
+    if(e != undefined){
+        if(draw){
+            const target = e.target.closest(".box");
+            if(target){
+                if(erase){
+                    target.classList.remove("box-touch");
+                    target.classList.add("box-erase");
+                }
+                else{
+                    target.classList.remove("box-erase");
+                    target.classList.add("box-touch");
+                }
+            }
         }
     }
 }
@@ -64,3 +74,18 @@ document.addEventListener("mousemove", changeColor);
 
 const newGrid = document.querySelector("#new");
 newGrid.addEventListener("click", generateGrid);
+
+const eraseBox = document.querySelector("#erase");
+
+function setErase(){
+    console.log(erase);
+    erase = !erase;
+    if(erase){
+        eraseBox.style.background = "pink";
+    }
+    else{
+        eraseBox.style.background = "rgb(201, 135, 146)";
+    }
+}
+
+eraseBox.addEventListener("click", setErase);

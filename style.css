@@ -43,6 +43,10 @@ button:hover{
     background-color: rgb(201, 135, 146);
 }
 
+.box-erase{
+    background-color: pink;
+}
+
 .grid-row{
     display: grid;
 }
