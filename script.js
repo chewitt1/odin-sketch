@@ -1,6 +1,7 @@
 let rows = 16;
 let size = 560/rows;
 let main = document.querySelector(".main");
+let draw = false;
 window.onload = () => {
     for(var i = 0; i < rows; i++){
         main.appendChild(getRow());
@@ -10,6 +11,7 @@ window.onload = () => {
 function getDiv(){
     let grid = document.createElement("div");
     grid.classList.add("box");
+    grid.setAttribute("ondrag", "changeColor(e)")
     grid.style.minHeight = (size + "px");
     grid.style.minWidth = (size + "px");
     return grid;
@@ -26,9 +28,11 @@ function getRow(){
 }
 
 function changeColor(e){
-    const target = e.target.closest(".box");
-    if(target){
-        target.classList.add("box-touch");
+    if(draw){
+        const target = e.target.closest(".box");
+        if(target){
+            target.classList.add("box-touch");
+        }
     }
 }
 
@@ -54,7 +58,9 @@ function generateGrid(){
     
 }
 
-document.addEventListener("mouseover", changeColor);
+document.addEventListener("mousedown", (e) => {draw = true;});
+document.addEventListener("mouseup", (e) => {draw = false;});
+document.addEventListener("mousemove", changeColor);
 
 const newGrid = document.querySelector("#new");
 newGrid.addEventListener("click", generateGrid);
