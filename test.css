@@ -1,0 +1,73 @@
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    max-height: 100vh;
+    min-height: 100vh;
+    background-color: rgb(110, 86, 116);
+}
+
+footer{
+    max-height: 24px;
+    width: 100%;
+    background-color: rgb(201, 135, 146);
+    padding: 2px 0;
+    position: absolute;
+    bottom: 0;
+}
+
+footer > button{
+    background-color: rgb(201, 135, 146);
+}
+
+/*Windows 95 Styles */
+
+.win{
+    background-color: rgb(171, 158, 173);;
+    height:800px;
+    width: 800px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#row-box{
+    max-width: 60px;
+}
+
+.start{
+    width: 60px;
+    height: 22px;
+    margin-left: 1px;
+    border: 1px inset rgb(144, 92, 101);
+}
+
+
+/*Grid Styles*/
+.canvas{
+    height: min(500px, 100%);
+    width: min(500px, 100%);
+    display: flex;
+}
+
+.box{
+    background-color: rgb(243, 220, 224);
+    border: 0.5px solid pink;
+    box-sizing: border-box;
+}
+
+.row{
+    display: flex;
+    width: fit-content;
+}
