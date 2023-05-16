@@ -3,20 +3,82 @@
     padding: 0;
 }
 
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(110, 86, 116);
+}
+
+main{
+    flex: 2;
+    border: 1px solid pink;
+    width: min(600px, 100%);
+    height: min(600px, 100%);
+    max-height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+    background-color: rgb(253, 220, 238);
+    margin-top: min(20px, 10%);
+}
+
+.taskbar{
+    max-height: 24px;
+    width: 100%;
+    background-color: rgb(201, 135, 146);
+    display: flex;
+    justify-content: space-between;
+    padding: 2px 0;
+}
+
+#task-text{
+    margin-left: 2px;
+    color: rgb(253, 220, 238);
+}
+
+.task-button{
+    width: 20px;
+    height: 20px;
+    color: rgb(253, 220, 238);
+}
+
+.task-buttons{
+    margin-right: 2px;
+}
+
+.menubar{
+    max-height: 24px;
+    width: 100%;
+    display: flex;
+    gap: 6px;
+}
+
 .content{
     display: flex;
     justify-content: center;
-    align-items: center;
+    padding: 0;
 }
-.main{
-    margin-top: 20px;
+
+.canvas{
+    overflow: scroll;
+    width: min(500px, 100%);
+    height: min(500px, 100%);
+    border: 2px inset;
 }
 
 .controls{
-    padding-right: 40px;
     display: flex;
-    flex-direction: column;
-    gap: 2px;
+    gap: 3px;
+}
+
+.controls > button{
+    width: min(50px, 50%);
+    width: min(50px, 50%);
+    background-color: rgb(235, 196, 222);
 }
 
 button{
@@ -49,4 +111,20 @@ button:hover{
 
 .grid-row{
     display: grid;
+}
+
+footer{
+    max-height: 24px;
+    width: 100%;
+    background-color: rgb(201, 135, 146);
+    padding: 2px 0;
+    position: absolute;
+    bottom: 0;
+}
+
+.start{
+    width: 60px;
+    height: 22px;
+    margin-left: 1px;
+    border: 1px inset rgb(144, 92, 101);
 }

@@ -1,11 +1,11 @@
 let rows = 16;
-let size = 560/rows;
-let main = document.querySelector(".main");
+let size = 460/rows;
+let canvas = document.querySelector(".canvas");
 let draw = false;
 let erase = false;
 window.onload = () => {
     for(var i = 0; i < rows; i++){
-        main.appendChild(getRow());
+        canvas.appendChild(getRow());
     }
 }
 
@@ -47,8 +47,8 @@ function changeColor(e){
 }
 
 function removeAllChildNodes() {//From:https://www.javascripttutorial.net/dom/manipulating/remove-all-child-nodes/
-    while (main.firstChild) {
-        main.removeChild(main.firstChild);
+    while (canvas.firstChild) {
+        canvas.removeChild(canvas.firstChild);
     }
 }
 
@@ -62,7 +62,7 @@ function generateGrid(){
         size = 560/rows;
         removeAllChildNodes();
         for(var i = 0; i < rows; i++){
-            main.appendChild(getRow());
+            canvas.appendChild(getRow());
         }
     }
     
