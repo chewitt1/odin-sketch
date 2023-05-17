@@ -254,3 +254,7 @@ footer > button{
     display: flex;
     width: fit-content;
 }
+
+#draw{
+    background-color: #e0aeb5;
+}

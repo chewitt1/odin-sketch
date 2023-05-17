@@ -3,20 +3,45 @@ let rows = 27;
 let close = false;
 let win = true;
 let draw = false;
+let erase = false;
+let color = "pink";
 
 /*jQuery*/
 $(document).ready(function(){
     /*Drawing Functions*/
-    function setDraw(e){
+    function setColor(e){
         if(draw){
-            this.style.background = "pink";
+            this.style.background = color;
         }
+    }
+
+    function setErase(e){
+        erase = !erase;
+        if(erase){
+            color = "rgb(243, 220, 224)";
+            this.style.background ="#e0aeb5";
+            $("#draw").css("background", "transparent");
+        }
+        else{
+            color = "pink";
+            this.style.background ="transparent";
+            $("#draw").css("background", "#e0aeb5");
+        }
+    }
+
+    function unsetErase(e){
+        erase = false;
+        this.style.background ="#e0aeb5";
+        $("#erase").css("background", "transparent");
     }
 
     let boxes = document.querySelectorAll(".box");
     boxes.forEach(box => box.addEventListener("mousedown", () => {draw = true;}));
-    boxes.forEach(box => box.addEventListener("mousemove", setDraw));
+    boxes.forEach(box => box.addEventListener("mouseleave", setColor));
     boxes.forEach(box => box.addEventListener("mouseup", () => {draw = false;}));
+
+    $("#erase").click(setErase);
+    $("#draw").click(unsetErase);
 
     /*Menubar Functions*/
     $(".task-1").click(function(){
