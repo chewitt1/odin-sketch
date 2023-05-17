@@ -158,7 +158,7 @@ button.action{
     height: 20px;
 }
 
-#sink2{
+#tooltip{
     border: 2px inset;
     width: 100%;
     display: flex;
