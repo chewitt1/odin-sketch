@@ -7,8 +7,12 @@
 body{
     display: flex;
     flex-direction: column;
-    align-items: center;
     background-color: rgb(110, 86, 116);
+}
+
+main{
+    display: grid;
+    grid-template-columns: 30% 70%;
 }
 
 footer{
@@ -26,7 +30,23 @@ footer > button{
 
 /*Windows 95 Styles */
 
+.icons{
+    padding: 10px 20px;
+    padding-left: 3px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: rgb(196, 157, 163);
+    font-size: 0.8rem;
+}
+
+.icon{
+    max-width: 100px;
+    text-align: center;
+}
+
 .win{
+    flex: 2;
     background-color: rgb(171, 158, 173);
     height: 560px;
     width: 560px;
@@ -174,6 +194,10 @@ button.action{
     border: 1px inset rgb(144, 92, 101);
 }
 
+.start:hover{
+    cursor: pointer;
+    background: rgb(110, 86, 116);
+}
 
 /*Grid Styles*/
 .canvas{

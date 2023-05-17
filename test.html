@@ -9,58 +9,83 @@
     <script src="./test.js" defer></script>
 </head>
 <body>
-    <div class="win">
-        <div class="taskbar">
-            <p id="task-title">untitled - Odin Sketch</p>
-            <div class="task-buttons">
-                <button class="task-1 task-button">-</button>
-                <button class="task-2 task-button">[ ]</button>
-                <button class="task-3 task-button">x</button>
+    <main>
+        <div class="icons">
+            <div class="icon">
+                <img width="36" height="36" src="https://img.icons8.com/parakeet/48/000000/erase.png" alt="erase"/>
+                <p>Odin Recipes</p>
+            </div>
+            <div class="icon">
+                <img width="36" height="36" src="https://img.icons8.com/parakeet/48/000000/erase.png" alt="erase"/>
+                <p>Odin Landing</p>
+            </div>
+            <div class="icon">
+                <img width="36" height="36" src="https://img.icons8.com/parakeet/48/000000/erase.png" alt="erase"/>
+                <p>Odin Rock Paper Scissors</p>
+            </div>
+            <div class="icon">
+                <img width="36" height="36" src="https://img.icons8.com/parakeet/48/000000/erase.png" alt="erase"/>
+                <p>Odin Sketch</p>
+            </div>
+            <div class="icon">
+                <img width="36" height="36" src="https://img.icons8.com/parakeet/48/000000/erase.png" alt="erase"/>
+                <p>Odin Calculator</p>
             </div>
         </div>
-        <div class="menubar">
-            <p class="menu-item">File</p>
-            <p class="menu-item">Edit</p>
-            <p class="menu-item">View</p>
-            <p class="menu-item">Image</p>
-            <p class="menu-item">Options</p>
-            <p class="menu-item">Help</p>
-        </div>
-        <div class="contain">
-            <div class="buttons">
-                <button class="tool-button1 action">
-                    <img width="32" height="32" src="https://img.icons8.com/parakeet/48/000000/erase.png" alt="erase"/>
-                </button>
-                <button class=" tool-button2 action">
-                    <img width="32" height="32" src="https://img.icons8.com/office/40/000000/pencil--v1.png" alt="pencil--v1"/>
-                </button>
-                <div id="sink">
-
+        <div class="win">
+            <div class="taskbar">
+                <p id="task-title">untitled - Odin Sketch</p>
+                <div class="task-buttons">
+                    <button class="task-1 task-button">-</button>
+                    <button class="task-2 task-button">[ ]</button>
+                    <button class="task-3 task-button">x</button>
+                </div>
+            </div>
+            <div class="menubar">
+                <p class="menu-item">File</p>
+                <p class="menu-item">Edit</p>
+                <p class="menu-item">View</p>
+                <p class="menu-item">Image</p>
+                <p class="menu-item">Options</p>
+                <p class="menu-item">Help</p>
+            </div>
+            <div class="contain">
+                <div class="buttons">
+                    <button class="tool-button1 action">
+                        <img width="32" height="32" src="https://img.icons8.com/parakeet/48/000000/erase.png" alt="erase"/>
+                    </button>
+                    <button class=" tool-button2 action">
+                        <img width="32" height="32" src="https://img.icons8.com/office/40/000000/pencil--v1.png" alt="pencil--v1"/>
+                    </button>
+                    <div id="sink">
+    
+                    </div>
+                </div>
+                
+                <div class="canvas-frame">
+                    <div id="canvas">
+                    
+                    </div>
+                </div>
+            </div>
+            <div class="grid">
+                <div id="curr">16</div>
+                <div class="grid-controls">
+                    <button class="grid-1 grid-button">
+                        NEW GRID
+                    </button>
+                    <button class="grid-2 grid-button">
+                        RESET
+                    </button>
+                </div>
+                <div id="tooltip">
+                    Tooltips go here (^_^)
                 </div>
             </div>
             
-            <div class="canvas-frame">
-                <div id="canvas">
-                
-                </div>
-            </div>
         </div>
-        <div class="grid">
-            <div id="curr">16</div>
-            <div class="grid-controls">
-                <button class="grid-1 grid-button">
-                    NEW GRID
-                </button>
-                <button class="grid-2 grid-button">
-                    RESET
-                </button>
-            </div>
-            <div id="tooltip">
-                Tooltips go here (^_^)
-            </div>
-        </div>
-        
-    </div>
+    </main>
+    
     <footer>
         <button class="start">Start</button>
     </footer>
