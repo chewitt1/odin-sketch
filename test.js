@@ -56,24 +56,20 @@ function setToolTip(e){
     else if(mainClass == "tool-button2"){
         tooltip.innerHTML = "Set draw mode";
     }
-    else if(mainClass = "grid-button"){
-        if(val == "NEW GRID"){
-            tooltip.innerHTML = "Create a new grid";
-        }
-        else if(val == "RESET"){
-            tooltip.innerHTML = "Reset current grid";
-        }
+    else if(mainClass == "grid-1"){
+        tooltip.innerHTML = "Create a new grid";
     }
-    else if(mainClass = "task-button"){
-        if(val == "-"){
-            tooltip.innerHTML = "Minimize Odin Sketch window";
-        }
-        else if(val == "[ ]"){
-            tooltip.innerHTML = "Remove Windows 95 background";
-        }
-        else if(val == "x"){
-            tooltip.innerHTML = "Close Odin Sketch window";
-        }
+    else if(mainClass == "grid-2"){
+        tooltip.innerHTML = "Reset current grid";
+    }
+    else if(mainClass == "task-1"){
+        tooltip.innerHTML = "Minimize Odin Sketch window";
+    }
+    else if(mainClass == "task-2"){
+        tooltip.innerHTML = "Remove Windows 95 background";
+    }
+    else if(mainClass == "task-3"){
+        tooltip.innerHTML = "Close Odin Sketch window";
     }
     else{
         console.log(mainClass);
