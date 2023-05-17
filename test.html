@@ -13,9 +13,9 @@
         <div class="taskbar">
             <p id="task-title">untitled - Odin Sketch</p>
             <div class="task-buttons">
-                <buttons id="task-button">-</buttons>
-                <buttons id="task-button">[ ]</buttons>
-                <buttons id="task-button">x</buttons>
+                <button class="task-button">-</button>
+                <button class="task-button">[ ]</button>
+                <button class="task-button">x</button>
             </div>
         </div>
         <div class="menubar">
@@ -48,11 +48,21 @@
                 </div>
             </div>
         </div>
-        <div class="grid-controls">
-            <button>
-                NEW GRID
-            </button>
+        <div class="grid">
+            <div id="curr">16</div>
+            <div class="grid-controls">
+                <button class="grid-button">
+                    NEW GRID
+                </button>
+                <button class="grid-button">
+                    RESET
+                </button>
+            </div>
+            <div id="sink2">
+                Tooltips go here (^_^)
+            </div>
         </div>
+        
     </div>
     <footer>
         <button class="start">Start</button>
