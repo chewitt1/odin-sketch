@@ -41,8 +41,17 @@ footer > button{
 }
 
 .icon{
-    max-width: 100px;
+    width: 80px;
+    max-height: 100px;
     text-align: center;
+}
+
+.icon:hover{
+    background: rgb(201, 135, 146, .3);
+}
+
+.icon > p:hover{
+    cursor: default;
 }
 
 .win{
@@ -104,7 +113,6 @@ footer > button{
 }
 
 .menubar > p:hover, .action:hover, #new-grid:hover, .task-button:hover, .grid-button:hover{
-    cursor: pointer;
     background: rgb(201, 135, 146);
 }
 
@@ -187,6 +195,7 @@ button.action{
     padding-bottom: 2px;
 }
 
+
 .start{
     width: 60px;
     height: 22px;
@@ -195,7 +204,6 @@ button.action{
 }
 
 .start:hover{
-    cursor: pointer;
     background: rgb(110, 86, 116);
 }
 

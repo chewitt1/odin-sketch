@@ -1,4 +1,19 @@
+/*Globals*/
 let rows = 27;
+
+/*jQuery*/
+$(document).ready(function(){
+    $(".task-1").click(function(){
+      $(".win").slideUp();
+    });
+    $("#o-sketch").click(function(){
+        $("#o-sketch").css("background-color","rgb(201, 135, 146, .3)");
+    });
+    $("#o-sketch").dblclick(function(){
+        $("#o-sketch").css("background-color","transparent");
+        $(".win").slideDown();
+    });
+});
 
 /*Create Grid Functions*/
 let canvas = document.querySelector("#canvas");
