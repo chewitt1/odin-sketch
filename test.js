@@ -1,17 +1,37 @@
 /*Globals*/
 let rows = 27;
+let close = false;
 
 /*jQuery*/
 $(document).ready(function(){
+    /*Menubar buttons*/
     $(".task-1").click(function(){
-      $(".win").slideUp();
+      $(".win").hide();
+      $("#tab").css("background", "rgb(220, 155, 166)");
+    });
+    $("#tab").click(function(){
+        $("#tab").css("background","#ebb7bf");
+        $(".win").show();
+    });
+    $(".task-2").click(function(){
+        $(".win").hide();
+    });
+    $(".task-3").click(function(){
+        $(".win").slideUp();
+        close = true;
     });
     $("#o-sketch").click(function(){
         $("#o-sketch").css("background-color","rgb(201, 135, 146, .3)");
     });
     $("#o-sketch").dblclick(function(){
         $("#o-sketch").css("background-color","transparent");
-        $(".win").slideDown();
+        if(!close){
+            $(".win").show();
+        }
+        else{
+            $(".win").slideDown();
+            close = false;
+        }
     });
 });
 

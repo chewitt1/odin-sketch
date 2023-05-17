@@ -15,19 +15,6 @@ main{
     grid-template-columns: 30% 70%;
 }
 
-footer{
-    max-height: 24px;
-    width: 100%;
-    background-color: rgb(201, 135, 146);
-    padding: 2px 0;
-    position: absolute;
-    bottom: 0;
-}
-
-footer > button{
-    background-color: rgb(201, 135, 146);
-}
-
 /*Windows 95 Styles */
 
 .icons{
@@ -74,6 +61,12 @@ footer > button{
     padding: 2px 0;
 }
 
+.title-box{
+    padding-left: 2px;
+    display: flex;
+    gap: 2px;
+}
+
 #task-title{
     margin-left: 2px;
     color: pink;
@@ -112,8 +105,17 @@ footer > button{
     padding: 0 4px;
 }
 
-.menubar > p:hover, .action:hover, #new-grid:hover, .task-button:hover, .grid-button:hover{
+.menubar > p:hover{
     background: rgb(201, 135, 146);
+}
+
+.action:hover, #new-grid:hover, .task-button:hover, .grid-button:hover{
+    background: rgb(201, 135, 146);
+    border: 1px inset;
+}
+
+.menubar > p:hover, #task-title:hover{
+    cursor: default;
 }
 
 .action{
@@ -195,17 +197,47 @@ button.action{
     padding-bottom: 2px;
 }
 
+footer{
+    max-height: 24px;
+    width: 100%;
+    background-color: rgb(201, 135, 146);
+    padding: 2px 0;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    gap: 4px;
+}
+
+footer > button{
+    background-color: rgb(201, 135, 146);
+}
 
 .start{
     width: 60px;
     height: 22px;
     margin-left: 1px;
-    border: 1px inset rgb(144, 92, 101);
+    border: 1px bevel rgb(144, 92, 101);
 }
 
 .start:hover{
     background: rgb(110, 86, 116);
+    border: 1px inset rgb(144, 92, 101);
 }
+
+#tab{
+    height: 22px;
+    width: 200px;
+    border: 2px inset rgb(144, 92, 101);
+    padding-left: 2px;
+    text-align: left;
+    background: #ebb7bf;
+}
+
+#tab:hover{
+    background: rgb(158, 127, 166);
+}
+
+
 
 /*Grid Styles*/
 .canvas{
