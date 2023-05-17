@@ -1,6 +1,7 @@
 /*Globals*/
 let rows = 27;
 let close = false;
+let win = true;
 
 /*jQuery*/
 $(document).ready(function(){
@@ -14,7 +15,21 @@ $(document).ready(function(){
         $(".win").show();
     });
     $(".task-2").click(function(){
-        $(".win").hide();
+        if(win){
+            $(".icons").slideUp();
+            $("footer").hide();
+            $("main").css("display", "block");
+            $("main").css("margin-left", "380px");
+            win = false;
+        }
+        else{
+            $(".icons").slideDown();
+            $("footer").show();
+            $("main").css("display", "grid");
+            $("main").css("margin-left", "0");
+            $("main").css("grid-template-columns", "30% 70%");
+            win = true;
+        }
     });
     $(".task-3").click(function(){
         $(".win").slideUp();
@@ -101,7 +116,7 @@ function setToolTip(e){
         tooltip.innerHTML = "Minimize Odin Sketch window";
     }
     else if(mainClass == "task-2"){
-        tooltip.innerHTML = "Remove Windows 95 background";
+        tooltip.innerHTML = "Toggle Windows 95 background";
     }
     else if(mainClass == "task-3"){
         tooltip.innerHTML = "Close Odin Sketch window";
