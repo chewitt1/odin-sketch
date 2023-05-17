@@ -2,10 +2,23 @@
 let rows = 27;
 let close = false;
 let win = true;
+let draw = false;
 
 /*jQuery*/
 $(document).ready(function(){
-    /*Menubar buttons*/
+    /*Drawing Functions*/
+    function setDraw(e){
+        if(draw){
+            this.style.background = "pink";
+        }
+    }
+
+    let boxes = document.querySelectorAll(".box");
+    boxes.forEach(box => box.addEventListener("mousedown", () => {draw = true;}));
+    boxes.forEach(box => box.addEventListener("mousemove", setDraw));
+    boxes.forEach(box => box.addEventListener("mouseup", () => {draw = false;}));
+
+    /*Menubar Functions*/
     $(".task-1").click(function(){
       $(".win").hide();
       $("#tab").css("background", "rgb(220, 155, 166)");
