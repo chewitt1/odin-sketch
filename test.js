@@ -9,8 +9,8 @@ for(let i = 0; i < rows; i++){
 function Box(){
     let box = document.createElement("div");
     box.classList.add("box");
-    box.style.height = ((500/rows).toString() + "px");
-    box.style.width = ((500/rows).toString() + "px");
+    box.style.height = ((440/rows).toString() + "px");
+    box.style.width = ((440/rows).toString() + "px");
     return box;
 }
 

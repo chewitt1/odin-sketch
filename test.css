@@ -7,8 +7,7 @@
 body{
     display: flex;
     flex-direction: column;
-    max-height: 100vh;
-    min-height: 100vh;
+    align-items: center;
     background-color: rgb(110, 86, 116);
 }
 
@@ -28,22 +27,107 @@ footer > button{
 /*Windows 95 Styles */
 
 .win{
-    background-color: rgb(171, 158, 173);;
-    height:800px;
-    width: 800px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.buttons{
+    background-color: rgb(171, 158, 173);
+    height: 550px;
+    width: 550px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    margin-top: 1rem;
 }
 
-#row-box{
-    max-width: 60px;
+.taskbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 14px;
+    width: 100%;
+    background-color: rgb(201, 135, 146);
+    padding: 2px 0;
+}
+
+#task-title{
+    margin-left: 2px;
+    color: pink;
+}
+
+.task-buttons{
+    display: flex;
+    gap: 10px;
+    margin-right: 2px;
+    color: pink;
+}
+
+.menubar{
+    display: flex;
+    gap: 10px;
+    margin: 2px;
+    align-self: flex-start;
+    color: rgb(80, 58, 85);
+    border-bottom: 1px ridge rgba(131, 111, 135, 0.6);
+    padding-bottom: 2px;
+    width: calc(100% - 4px);
+}
+
+.menubar > p::first-letter{
+    text-decoration: underline;
+}
+
+.menubar > p{
+    border-radius: 2px;
+    padding: 0 4px;
+}
+
+.menubar > p:hover, .action:hover, #new-grid:hover{
+    cursor: pointer;
+    background: rgb(201, 135, 146);
+}
+
+.action{
+    background: rgb(171, 158, 173);
+}
+
+.contain{
+    display: grid;
+    grid-template-columns: 15% 85%;
+}
+
+
+.buttons{
+    margin-left: 4px;
+}
+
+button.action{
+    max-height: 48px;
+    max-width: 48px;
+}
+
+#new-grid{
+    background: rgb(171, 158, 173);
+    width: 76px;
+    height: 32px;
+    margin-top: 2px;
+}
+
+#sink{
+    border: 2px inset;
+    height: 350px;
+    margin-top: 8px;
+    margin-left: 4px;
+    width: 64px;
+}
+
+.canvas-frame{
+    overflow: scroll;
+    border: 2px inset rgb(231, 210, 234);
+    margin-right: 4px;
+}
+
+.grid-controls{
+    width: 100%;
+}
+
+.grid-controls > button{
+    background: rgb(171, 158, 173);
 }
 
 .start{
