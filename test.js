@@ -1,5 +1,5 @@
 /*Globals*/
-let rows = 27;
+let rows = 16;
 let close = false;
 let win = true;
 let draw = false;
@@ -33,12 +33,16 @@ $(document).ready(function(){
         erase = false;
         this.style.background ="#e0aeb5";
         $("#erase").css("background", "transparent");
+        color = "pink";
     }
 
     let boxes = document.querySelectorAll(".box");
+    let can = document.querySelector("#canvas");
     boxes.forEach(box => box.addEventListener("mousedown", () => {draw = true;}));
-    boxes.forEach(box => box.addEventListener("mouseleave", setColor));
+    boxes.forEach(box => box.addEventListener("mouseenter", setColor));
     boxes.forEach(box => box.addEventListener("mouseup", () => {draw = false;}));
+    can.addEventListener("mouseup", () => {draw = false;});
+    can.addEventListener("dragend", () => {draw = false;})
 
     $("#erase").click(setErase);
     $("#draw").click(unsetErase);
@@ -54,14 +58,14 @@ $(document).ready(function(){
     });
     $(".task-2").click(function(){
         if(win){
-            $(".icons").slideUp();
+            $(".icons").hide();
             $("footer").hide();
             $("main").css("display", "block");
             $("main").css("margin-left", "380px");
             win = false;
         }
         else{
-            $(".icons").slideDown();
+            $(".icons").show();
             $("footer").show();
             $("main").css("display", "grid");
             $("main").css("margin-left", "0");

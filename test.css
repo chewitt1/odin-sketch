@@ -238,21 +238,22 @@ footer > button{
 }
 
 /*Grid Styles*/
-.canvas{
-    height: min(500px, 100%);
-    width: min(500px, 100%);
-    display: flex;
+
+#canvas{
+    user-select: none;
 }
 
 .box{
     background-color: rgb(243, 220, 224);
     border: 0.5px solid pink;
     box-sizing: border-box;
+    user-select: text;
 }
 
 .row{
     display: flex;
     width: fit-content;
+    user-select: none;
 }
 
 #draw{
