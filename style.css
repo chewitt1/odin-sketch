@@ -7,7 +7,7 @@
 body{
     display: flex;
     flex-direction: column;
-    background-color: rgb(110, 86, 116);
+    background-color: rgb(142, 113, 149);
 }
 
 main{
@@ -23,7 +23,8 @@ main{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    color: rgb(196, 157, 163);
+    color: rgb(89, 60, 64);
+    text-shadow: 1px 1px 1px rgb(201, 144, 154);
     font-size: 0.8rem;
 }
 
