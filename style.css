@@ -1,116 +1,193 @@
 *{
-    margin: 0;
     padding: 0;
+    margin: 0;
+    
 }
 
 body{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    justify-content: center;
     background-color: rgb(110, 86, 116);
 }
 
 main{
-    flex: 2;
-    border: 1px solid pink;
-    width: min(600px, 100%);
-    height: min(600px, 100%);
-    max-height: 600px;
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+/*Windows 95 Styles */
+
+.icons{
+    padding: 10px 20px;
+    padding-left: 3px;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    gap: 4px;
-    background-color: rgb(253, 220, 238);
-    margin-top: min(20px, 10%);
+    gap: 10px;
+    color: rgb(196, 157, 163);
+    font-size: 0.8rem;
+}
+
+.icon{
+    width: 80px;
+    max-height: 100px;
+    text-align: center;
+}
+
+.icon:hover{
+    background: rgb(201, 135, 146, .3);
+}
+
+.icon > p:hover, #curr:hover{
+    cursor: default;
+}
+
+.win{
+    flex: 2;
+    background-color: rgb(171, 158, 173);
+    height: 560px;
+    width: 560px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
 }
 
 .taskbar{
-    max-height: 24px;
-    width: 100%;
-    background-color: rgb(201, 135, 146);
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    max-height: 20px;
+    width: 100%;
+    background-color: rgb(201, 135, 146);
     padding: 2px 0;
 }
 
-#task-text{
-    margin-left: 2px;
-    color: rgb(253, 220, 238);
+.title-box{
+    padding-left: 2px;
+    display: flex;
+    gap: 2px;
 }
 
-.task-button{
-    width: 20px;
-    height: 20px;
-    color: rgb(253, 220, 238);
+#task-title{
+    margin-left: 2px;
+    color: pink;
 }
 
 .task-buttons{
-    margin-right: 2px;
+    display: flex;
+    gap: 2px;
+    color: pink;
+    margin: 2px;
+}
+
+.task-button{
+    background: rgb(171, 158, 173);
+    width: 20px;
+    height: 20px;
 }
 
 .menubar{
-    max-height: 24px;
-    width: 100%;
     display: flex;
-    gap: 6px;
+    gap: 10px;
+    margin: 2px;
+    align-self: flex-start;
+    color: rgb(80, 58, 85);
+    border-bottom: 1px ridge rgba(131, 111, 135, 0.6);
+    padding-bottom: 2px;
+    width: calc(100% - 4px);
 }
 
-.content{
+.menubar > p::first-letter{
+    text-decoration: underline;
+}
+
+.menubar > p{
+    border-radius: 2px;
+    padding: 0 4px;
+}
+
+.menubar > p:hover{
+    background: rgb(201, 135, 146);
+}
+
+.action:hover, #new-grid:hover, .task-button:hover, .grid-button:hover{
+    background: rgb(201, 135, 146);
+    border: 1px inset;
+}
+
+.menubar > p:hover, #task-title:hover{
+    cursor: default;
+}
+
+.action{
+    background: rgb(171, 158, 173);
+}
+
+.contain{
+    display: grid;
+    grid-template-columns: 15% 85%;
+}
+
+.buttons{
+    margin-left: 8px;
+}
+
+button.action{
+    max-height: 48px;
+    max-width: 48px;
+}
+
+#sink{
+    border: 2px inset;
+    height: 390px;
+    margin-top: 8px;
+    margin-left: 4px;
+    width: 64px;
+}
+
+.canvas-frame{
+    overflow: scroll;
+    border: 2px inset rgb(231, 210, 234);
+    margin-left: 8px;
+    width: fit-content;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 12% 23% 62.5%;
+    padding-left: 13px;
+    margin-top: 3px;
+}
+
+#curr{
+    height: 36px;
     display: flex;
     justify-content: center;
-    padding: 0;
-}
-
-.canvas{
-    overflow: scroll;
-    width: min(500px, 100%);
-    height: min(500px, 100%);
+    align-items: center;
     border: 2px inset;
 }
 
-.controls{
+.grid-controls{
+    margin-left: 2.5%;
     display: flex;
-    gap: 3px;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
 }
 
-.controls > button{
-    width: min(50px, 50%);
-    width: min(50px, 50%);
-    background-color: rgb(235, 196, 222);
-}
-
-button{
-    background-color: rgb(201, 135, 146);
+.grid-controls > button{
+    display: block;
+    background: rgb(171, 158, 173);
     width: 100px;
-    height: 40px;
+    height: 20px;
 }
 
-button:hover{
-    cursor: pointer;
-    background-color: pink;
-}
-
-.box{
-    background: pink; 
-    border: 0.5px solid rgb(201, 135, 146);
-}
-
-.box:hover{
-    cursor: pointer;
-}
-
-.box-touch{
-    background-color: rgb(201, 135, 146);
-}
-
-.box-erase{
-    background-color: pink;
-}
-
-.grid-row{
-    display: grid;
+#tooltip{
+    border: 2px inset;
+    width: 100%;
+    display: flex;
+    align-items: end;
+    padding-left: 2px;
+    padding-bottom: 2px;
 }
 
 footer{
@@ -120,11 +197,58 @@ footer{
     padding: 2px 0;
     position: absolute;
     bottom: 0;
+    display: flex;
+    gap: 4px;
+}
+
+footer > button{
+    background-color: rgb(201, 135, 146);
 }
 
 .start{
     width: 60px;
     height: 22px;
     margin-left: 1px;
+    border: 1px bevel rgb(144, 92, 101);
+}
+
+.start:hover{
+    background: rgb(110, 86, 116);
     border: 1px inset rgb(144, 92, 101);
+}
+
+#tab{
+    height: 22px;
+    width: 200px;
+    border: 2px inset rgb(144, 92, 101);
+    padding-left: 2px;
+    text-align: left;
+    background: #ebb7bf;
+}
+
+#tab:hover{
+    background: rgb(158, 127, 166);
+}
+
+/*Grid Styles*/
+
+#canvas{
+    user-select: none;
+}
+
+.box{
+    background-color: rgb(243, 220, 224);
+    border: 0.5px solid pink;
+    box-sizing: border-box;
+    user-select: text;
+}
+
+.row{
+    display: flex;
+    width: fit-content;
+    user-select: none;
+}
+
+#draw{
+    background-color: #e0aeb5;
 }
