@@ -110,6 +110,7 @@ $(document).ready(function(){
     });
     $(".task-3").click(function(){
         $(".win").slideUp();
+        $("#tab").hide();
         close = true;
     });
     $("#o-sketch").click(function(){
@@ -122,6 +123,7 @@ $(document).ready(function(){
         }
         else{
             $(".win").slideDown();
+            $("#tab").show();
             close = false;
         }
     });
